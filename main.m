@@ -43,7 +43,7 @@ para.S = 16;
 rate_S16SegRIS = segmentedRIS(para, ch, W, phi, Gamma);
 
 %% S=16, 固定分块
-fprintf('S=4, 固定分块');
+fprintf('S=16, 固定分块');
 para.S = 16;
 [W, phi, Gamma] = initialize(para, ch);
 rate_S16SegRISFixed = fixedSegmentedRIS(para, ch, W, phi, Gamma);
@@ -67,7 +67,7 @@ S4Color = [0.9290, 0.6940, 0.1250];
 S8Color = [0.4940, 0.1840, 0.5560];  
 S16Color = [0.4660, 0.6740, 0.1880]; 
 
-% 绘制 No Segmentation (保持原蓝色)
+% 绘制 No Segmentation
 h1 = plot(rate_noSegRIS, '-o', 'LineWidth', 1.2, ...
           'Color', noSegColor, ...
           'MarkerIndices', 1:5:length(rate_noSegRIS));
